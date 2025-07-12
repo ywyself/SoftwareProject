@@ -1,0 +1,21 @@
+方法一：改注册表
+一个是v6版本，一个是v7版本
+:: v6 禁自动更新
+reg add HKCU\Software\Bandizip /f /v bCheckUpdate /t REG_DWORD /d 0
+
+:: v7 禁自动更新
+reg add HKCU\Software\Bandizip /f /v update /t REG_DWORD /d 2
+
+
+方法二：
+删除安装目录下的Updater.exe ， 好像无效
+
+方法三：
+修改安装目录下的VersionNo.ini文件，BuildNo 改大一点
+
+[Version]
+
+BuildNo =99999
+
+
+
